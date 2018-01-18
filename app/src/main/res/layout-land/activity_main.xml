@@ -1,138 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:orientation="horizontal"
     android:theme="@style/Theme.AppCompat.Light.NoActionBar"
     tools:context="com.example.android.helloandroid.MainActivity">
 
-    <!--parent is usless-->
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/topBottomMargin"
+        android:orientation="vertical">
 
-        <!--Left side of layout-->
-        <LinearLayout
+        <!--1st row-->
+        <TextView
+            android:id="@+id/compName"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="sans-serif-smallcaps"
+            android:gravity="center"
+            android:text="@string/compName"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/titleSize" />
 
-            <!--1st row-->
-            <!--need alt font for api 15-->
-            <TextView
-                android:id="@+id/compName"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="32dp"
-                android:layout_marginRight="32dp"
-                android:fontFamily="sans-serif-smallcaps"
-                android:gravity="center_vertical"
-                android:text="@string/compName"
-                android:textColor="@color/colorPrimary"
-                android:textSize="@dimen/titleSize" />
+        <!--2nd row-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/message"
+            android:textSize="@dimen/bodySize" />
 
-            <!--2nd row-->
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/message"
-                android:textSize="19dp" />
+        <!--3rd row-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/headerMargin"
+            android:fontFamily="@string/titleStyle"
+            android:gravity="center"
+            android:text="@string/header"
+            android:textSize="@dimen/titleSize" />
 
-            <!--3rd row-->
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="16dp"
-                android:fontFamily="sans-serif-smallcaps"
-                android:gravity="center_horizontal"
-                android:text="Contact Us:"
-                android:textSize="28dp" />
+        <!--4th row, website info-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/marginAround"
+            android:autoLink="web"
+            android:drawableLeft="@mipmap/ic_computer"
+            android:text="@string/website"
+            android:textSize="@dimen/bodySize" />
 
-            <!--4th row, website info-->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:orientation="horizontal">
+        <!--5th row, phone info-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/marginAround"
+            android:autoLink="phone"
+            android:drawableLeft="@mipmap/ic_phone"
+            android:text="@string/phone"
+            android:textSize="@dimen/bodySize" />
 
-                <ImageView
-                    android:layout_width="29dp"
-                    android:layout_height="29dp"
-                    android:layout_marginLeft="10dp"
-                    android:src="@drawable/world_icon" />
+        <!--6th row, address info-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/marginAround"
+            android:autoLink="map"
+            android:drawableLeft="@mipmap/ic_business"
+            android:text="@string/address"
+            android:textSize="@dimen/bodySize" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:text="@string/website"
-                    android:textSize="18dp" />
-
-            </LinearLayout>
-
-            <!--5th row, phone info-->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="16dp"
-                android:layout_marginTop="16dp">
-
-                <ImageView
-                    android:layout_width="29dp"
-                    android:layout_height="29dp"
-                    android:layout_marginLeft="10dp"
-                    android:src="@drawable/phone_icon" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:text="@string/phone"
-                    android:textSize="18dp" />
-            </LinearLayout>
-
-            <!--6th row, address info-->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="29dp"
-                    android:layout_height="29dp"
-                    android:layout_gravity="top"
-                    android:layout_marginLeft="10dp"
-                    android:src="@drawable/location_icon" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:text="@string/address"
-                    android:textSize="18dp" />
-            </LinearLayout>
-
-
-        </LinearLayout>
-
-        <!--Right section of layout-->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="right">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:contentDescription="@string/dogDiscription"
-                android:scaleType="centerCrop"
-                android:src="@drawable/dog" />
-        </LinearLayout>
     </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/dogDiscription"
+        android:scaleType="centerCrop"
+        android:src="@drawable/dog" />
+
 </LinearLayout>

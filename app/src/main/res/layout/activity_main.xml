@@ -26,9 +26,8 @@
                 android:id="@+id/compName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-smallcaps"
+                android:fontFamily="@string/titleStyle"
                 android:gravity="center"
-
                 android:text="@string/compName"
                 android:textColor="@color/colorPrimary"
                 android:textSize="@dimen/titleSize" />
@@ -36,11 +35,13 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
+                android:layout_margin="@dimen/marginAround"
+                android:fontFamily="@string/bodyStyle"
+                android:forceHasOverlappingRendering="false"
                 android:gravity="center_horizontal"
                 android:text="@string/message"
+                android:textColor="@color/topBody"
                 android:textSize="@dimen/bodySize" />
-
 
         </LinearLayout>
 
@@ -55,6 +56,7 @@
                 android:contentDescription="@string/dogDiscription"
                 android:scaleType="centerCrop"
                 android:src="@drawable/dog" />
+
         </LinearLayout>
     </LinearLayout>
 
@@ -62,6 +64,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/leftMargin"
         android:orientation="horizontal">
 
         <!--Left side of middle section-->
@@ -72,95 +75,62 @@
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_margin="10dp"
-                android:fontFamily="sans-serif-smallcaps"
-                android:text="Contact Us:"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/marginAround"
+                android:fontFamily="@string/titleStyle"
+                android:text="@string/header"
                 android:textSize="@dimen/titleSize" />
+
         </LinearLayout>
 
         <!--Right side of middle section-->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:gravity="center_vertical"
+
             android:orientation="vertical">
 
             <!--1st Row-->
-            <LinearLayout
+            <TextView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:layout_marginBottom="16dp"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="29dp"
-                    android:layout_height="29dp"
-                    android:src="@drawable/world_icon" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:autoLink="web"
-                    android:text="@string/website"
-                    android:textSize="@dimen/bodySize" />
-
-            </LinearLayout>
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/topBottomMargin"
+                android:autoLink="web"
+                android:drawableLeft="@mipmap/ic_computer"
+                android:fontFamily="@string/bodyStyle"
+                android:text="@string/website"
+                android:textSize="@dimen/bodySize" />
 
             <!--2nd row-->
-            <LinearLayout
-                android:layout_width="match_parent"
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="16dp"
-                android:layout_marginTop="16dp">
-
-                <ImageView
-                    android:layout_width="29dp"
-                    android:layout_height="29dp"
-                    android:src="@drawable/phone_icon" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:autoLink="phone"
-                    android:text="@string/phone"
-                    android:textSize="@dimen/bodySize" />
-            </LinearLayout>
+                android:layout_margin="@dimen/topBottomMargin"
+                android:autoLink="phone"
+                android:drawableLeft="@mipmap/ic_phone"
+                android:fontFamily="@string/bodyStyle"
+                android:text="@string/phone"
+                android:textSize="@dimen/bodySize" />
 
             <!--3rd row-->
-            <LinearLayout
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:orientation="horizontal">
+                android:layout_margin="@dimen/topBottomMargin"
+                android:autoLink="map"
+                android:drawableLeft="@mipmap/ic_business"
+                android:fontFamily="@string/bodyStyle"
+                android:text="@string/address"
+                android:textSize="@dimen/bodySize" />
 
-                <ImageView
-                    android:layout_width="29dp"
-                    android:layout_height="29dp"
-                    android:layout_gravity="center_vertical"
-                    android:src="@drawable/location_icon" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:autoLink="map"
-                    android:text="@string/address"
-                    android:textSize="@dimen/bodySize" />
-            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
         android:contentDescription="@string/udacityDiscription"
         android:scaleType="centerCrop"
         android:src="@drawable/udacity" />
+
 </LinearLayout>
