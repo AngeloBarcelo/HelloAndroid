@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -18,10 +18,12 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_margin="15sp"
             android:orientation="vertical">
 
             <!--1st row-->
-            <!--need alt font for api 15-->
+            <!--TODO: need alt font for api 15-->
+            <!--TODO: move margin left & right to dimensions-->
             <TextView
                 android:id="@+id/compName"
                 android:layout_width="wrap_content"
@@ -29,93 +31,94 @@
                 android:layout_marginLeft="32dp"
                 android:layout_marginRight="32dp"
                 android:fontFamily="sans-serif-smallcaps"
-                android:gravity="center_vertical"
+                android:gravity="center"
                 android:text="@string/compName"
                 android:textColor="@color/colorPrimary"
                 android:textSize="@dimen/titleSize" />
 
             <!--2nd row-->
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="@string/message"
-                android:textSize="19dp" />
+                android:textSize="@dimen/bodySize" />
 
             <!--3rd row-->
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
                 android:fontFamily="sans-serif-smallcaps"
-                android:gravity="center_horizontal"
+                android:gravity="center"
                 android:text="Contact Us:"
-                android:textSize="28dp" />
+                android:textSize="@dimen/titleSize" />
 
             <!--4th row, website info-->
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_width="29dp"
-                    android:layout_height="29dp"
-                    android:layout_marginLeft="10dp"
+                    android:layout_width="@dimen/iconSize"
+                    android:layout_height="@dimen/iconSize"
                     android:src="@drawable/world_icon" />
 
                 <TextView
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
+                    android:autoLink="web"
                     android:text="@string/website"
                     android:textSize="18dp" />
 
             </LinearLayout>
 
             <!--5th row, phone info-->
+            <!--TODO: move margin top & bottom to dimensions-->
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
                 android:layout_marginBottom="16dp"
                 android:layout_marginTop="16dp">
 
                 <ImageView
-                    android:layout_width="29dp"
-                    android:layout_height="29dp"
-                    android:layout_marginLeft="10dp"
+                    android:layout_width="@dimen/iconSize"
+                    android:layout_height="@dimen/iconSize"
                     android:src="@drawable/phone_icon" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
+                    android:autoLink="phone"
                     android:text="@string/phone"
-                    android:textSize="18dp" />
+                    android:textSize="@dimen/bodySize" />
             </LinearLayout>
 
             <!--6th row, address info-->
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_width="29dp"
-                    android:layout_height="29dp"
+                    android:layout_width="@dimen/iconSize"
+                    android:layout_height="@dimen/iconSize"
                     android:layout_gravity="top"
-                    android:layout_marginLeft="10dp"
+
                     android:src="@drawable/location_icon" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
+                    android:autoLink="map"
                     android:text="@string/address"
-                    android:textSize="18dp" />
+                    android:textSize="@dimen/bodySize" />
             </LinearLayout>
 
 

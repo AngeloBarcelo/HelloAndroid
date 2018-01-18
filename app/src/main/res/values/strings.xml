@@ -4,7 +4,9 @@
     <string name="compName">Udacity</string>
     <string name="phone">650-555-5555</string>
     <string name="website">www.udacity.com</string>
-    <string name="address">2465 Latham St, Mountain View, CA 94093 </string>
+    <string name="address">2465 Latham St.\nMountain View,\nCA, 94093 </string>
     <string name="dogDiscription">A dog wearing glasses sitting in front of a laptop</string>
     <string name="udacityDiscription">Image reads: new year, new skills. Learn tomorrow's skills today.</string>
+    <string name="worldIcon">web address</string>
+    <string name="phoneIcon">phone number</string>
 </resources>

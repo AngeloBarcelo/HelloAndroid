@@ -26,7 +26,7 @@
                 android:id="@+id/compName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-smallcaps"
+                android:fontFamily="@string/titleStyle"
                 android:gravity="center"
 
                 android:text="@string/compName"
@@ -36,11 +36,13 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
+                android:layout_margin="@dimen/marginAround"
+                android:fontFamily="@string/bodyStyle"
+                android:forceHasOverlappingRendering="false"
                 android:gravity="center_horizontal"
                 android:text="@string/message"
+                android:textColor="#ffffff"
                 android:textSize="@dimen/bodySize" />
-
 
         </LinearLayout>
 
@@ -55,6 +57,7 @@
                 android:contentDescription="@string/dogDiscription"
                 android:scaleType="centerCrop"
                 android:src="@drawable/dog" />
+
         </LinearLayout>
     </LinearLayout>
 
@@ -73,10 +76,11 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_margin="10dp"
-                android:fontFamily="sans-serif-smallcaps"
+                android:layout_margin="@dimen/marginAround"
+                android:fontFamily="@string/titleStyle"
                 android:text="Contact Us:"
                 android:textSize="@dimen/titleSize" />
+
         </LinearLayout>
 
         <!--Right side of middle section-->
@@ -95,16 +99,21 @@
                 android:layout_marginBottom="16dp"
                 android:orientation="horizontal">
 
+                <!--TODO: move contentDescription to dimensions-->
+
                 <ImageView
-                    android:layout_width="29dp"
-                    android:layout_height="29dp"
+                    android:layout_width="@dimen/iconSize"
+                    android:layout_height="@dimen/iconSize"
+                    android:contentDescription="@string/worldIcon"
                     android:src="@drawable/world_icon" />
 
+                <!--TODO: move marginLeft to dimensions-->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
                     android:autoLink="web"
+                    android:fontFamily="@string/bodyStyle"
                     android:text="@string/website"
                     android:textSize="@dimen/bodySize" />
 
@@ -118,16 +127,21 @@
                 android:layout_marginBottom="16dp"
                 android:layout_marginTop="16dp">
 
+                <!--TODO: move contentDescription to dimensions-->
+                <!--TODO: move width & height to dimensions-->
                 <ImageView
-                    android:layout_width="29dp"
-                    android:layout_height="29dp"
+                    android:layout_width="@dimen/iconSize"
+                    android:layout_height="@dimen/iconSize"
+                    android:contentDescription="@string/phoneIcon"
                     android:src="@drawable/phone_icon" />
 
+                <!--TODO: move marginLeft to dimensions-->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
                     android:autoLink="phone"
+                    android:fontFamily="@string/bodyStyle"
                     android:text="@string/phone"
                     android:textSize="@dimen/bodySize" />
             </LinearLayout>
@@ -139,19 +153,24 @@
                 android:layout_marginTop="16dp"
                 android:orientation="horizontal">
 
+
                 <ImageView
-                    android:layout_width="29dp"
-                    android:layout_height="29dp"
+                    android:layout_width="@dimen/iconSize"
+                    android:layout_height="@dimen/iconSize"
                     android:layout_gravity="center_vertical"
+                    android:contentDescription="Address"
                     android:src="@drawable/location_icon" />
 
+                <!--TODO: move marginLeft to dimensions-->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
                     android:autoLink="map"
+                    android:fontFamily="@string/bodyStyle"
                     android:text="@string/address"
                     android:textSize="@dimen/bodySize" />
+
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
@@ -163,4 +182,5 @@
         android:contentDescription="@string/udacityDiscription"
         android:scaleType="centerCrop"
         android:src="@drawable/udacity" />
+
 </LinearLayout>
